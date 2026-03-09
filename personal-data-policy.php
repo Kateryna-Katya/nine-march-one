@@ -18,62 +18,64 @@ $domainTitle = ucwords(str_replace('-', ' ', $domainSlug));
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <?= $domainTitle ?> — Экспертный консалтинг и стратегии роста
+        <?= $domainTitle ?> — Экспертный консалтинг и инновации
     </title>
-<link rel="icon"
-    href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23635BFF;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230A2540;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M4 16H9L12 6L18 26L21 16H28' stroke='url(%23grad)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='28' cy='16' r='3' fill='%23635BFF' /%3E%3C/svg%3E"
-    type="image/svg+xml">
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300CEC9'/><circle cx='50' cy='50' r='25' fill='white'/><circle cx='70' cy='30' r='10' fill='%236C5CE7'/></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Manrope:wght@500;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
         rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header class="header">
+    <header class="header" id="header">
         <div class="container header__container">
             <a href="./#hero" class="logo">
-                <span class="logo__icon"></span>
+                <span class="logo__dot"></span>
                 <span class="logo__text">
                     <?= $domainTitle ?>
                 </span>
             </a>
 
-            <nav class="nav">
+            <nav class="nav" id="nav">
                 <ul class="nav__list">
-                    <li><a href="./#hero" class="nav__link">Главная</a></li>
-                    <li><a href="./#strategies" class="nav__link">Стратегии</a></li>
-                    <li><a href="./#expertise" class="nav__link">Экспертиза</a></li>
-                    <li><a href="./#insights" class="nav__link">Инсайты</a></li>
-                    <li><a href="./#reviews" class="nav__link">Отзывы</a></li>
+                    <li class="nav__item"><a href="./#hero" class="nav__link">Главная</a></li>
+                    <li class="nav__item"><a href="./#strategy" class="nav__link">Стратегия</a></li>
+                    <li class="nav__item"><a href="./#insights" class="nav__link">Аналитика</a></li>
+                    <li class="nav__item"><a href="./#innovation" class="nav__link">Инновации</a></li>
+                    <li class="nav__item"><a href="./#about" class="nav__link">О нас</a></li>
                 </ul>
             </nav>
 
-            <a href="./#contact" class="btn btn--outline header__cta">Связаться</a>
-
-            <button class="burger" aria-label="Menu">
-                <span></span>
-            </button>
+            <div class="header__actions">
+                <a href="./#contact" class="btn btn--primary">Связаться</a>
+<button class="burger" id="burger-menu" aria-label="Открыть меню">
+    <span></span>
+</button>
+            </div>
         </div>
     </header>
 
 <main>
     <section class="pages">
         <div class="container">
-            <h1>Политика касаемо обработки персональных данных</h1>
+            <h1 data-aos="fade-down">Политика касаемо обработки персональных данных</h1>
 
             <h2>1. Общие положения</h2>
             <p>
                 Настоящая политика обработки персональных данных (далее —
                 «Политика») определяет порядок и условия обработки персональных
                 данных, предпринимаемые платформой <strong><?= $domainTitle ?></strong> (далее — «Оператор»), и
-                устанавливает меры по обеспечению безопасности этих данных.
+                устанавливает меры по обеспечению безопасности этих данных в соответствии с законодательством Италии и нормами GDPR.
             </p>
             <p>
                 1.1. Важнейшей целью и условием осуществления своей деятельности
@@ -112,11 +114,6 @@ $domainTitle = ucwords(str_replace('-', ' ', $domainSlug));
                     персональных данных от неправомерного или случайного доступа к
                     ним, уничтожения, изменения или блокирования.
                 </li>
-                <li>
-                    <strong>Согласие</strong> — добровольное, информированное и
-                    сознательное выражение воли Пользователя на обработку его
-                    персональных данных.
-                </li>
             </ul>
 
             <h2>3. Данные, которые мы обрабатываем</h2>
@@ -127,14 +124,14 @@ $domainTitle = ucwords(str_replace('-', ' ', $domainSlug));
                     <ul>
                         <li>Фамилия, имя, отчество;</li>
                         <li>Адрес электронной почты (Email);</li>
-                        <li>Номера телефонов (валидация по стандартам Германии).</li>
+                        <li>Номера телефонов (валидация по стандартам Италии).</li>
                     </ul>
                 </li>
                 <li>
                     <strong>Данные, собираемые автоматически:</strong>
                     <ul>
                         <li>
-                            Также на сайте происходит сбор и обработка обезличенных данных
+                            На сайте происходит сбор и обработка обезличенных данных
                             о посетителях (в т.ч. файлов «cookie») с помощью сервисов
                             интернет-статистики (Google Аналитика и других). Эти данные включают 
                             IP-адрес, тип браузера и время доступа.
@@ -151,7 +148,7 @@ $domainTitle = ucwords(str_replace('-', ' ', $domainSlug));
             <ul>
                 <li>
                     Идентификация Пользователя для предоставления доступа к сервисам
-                    консалтинговой платформы.
+                    инновационной консалтинговой платформы.
                 </li>
                 <li>
                     Установление с Пользователем обратной связи, включая направление
@@ -159,17 +156,14 @@ $domainTitle = ucwords(str_replace('-', ' ', $domainSlug));
                     запросов и заявок.
                 </li>
                 <li>
-                    Заключение и исполнение договоров на экспертные услуги в ЕС.
+                    Заключение и исполнение договоров на экспертные услуги в Италии и ЕС.
                 </li>
                 <li>
                     Информирование Пользователя посредством отправки электронных писем. 
                     Пользователь всегда может отказаться от рассылок, направив
                     Оператору письмо на адрес
-                    <a href="mailto:hello@<?= $fullDomain ?>">hello@<?= $fullDomain ?></a>
+                    <a href="mailto:support@<?= $fullDomain ?>">support@<?= $fullDomain ?></a>
                     с пометкой «Отказ от уведомлений».
-                </li>
-                <li>
-                    Улучшение качества работы сайта и аналитика его использования.
                 </li>
             </ul>
 
@@ -184,7 +178,7 @@ $domainTitle = ucwords(str_replace('-', ' ', $domainSlug));
                     путем заполнения форм на сайте <strong><?= $domainTitle ?></strong>.
                 </li>
                 <li>
-                    При условии, что сохранение файлов «cookie» разрешено в настройках браузера.
+                    При условии, что сохранение файлов «cookie» разрешено в настройках браузера Пользователя.
                 </li>
             </ul>
 
@@ -192,17 +186,17 @@ $domainTitle = ucwords(str_replace('-', ' ', $domainSlug));
             <ul>
                 <li>
                     Оператор принимает все возможные правовые, организационные и технические меры для
-                    защиты данных от неправомерного доступа в соответствии с нормами GDPR.
+                    защиты данных от неправомерного доступа в соответствии с Генеральным регламентом о защите данных (GDPR).
                 </li>
                 <li>
                     Персональные данные Пользователя никогда не будут переданы третьим лицам, 
-                    за исключением случаев, предусмотренных законодательством.
+                    за исключением случаев, предусмотренных законодательством ЕС.
                 </li>
                 <li>
                     Срок обработки персональных данных является неограниченным.
                     Пользователь может в любой момент отозвать свое согласие, направив 
                     Оператору уведомление на email 
-                    <a href="mailto:hello@<?= $fullDomain ?>">hello@<?= $fullDomain ?></a>.
+                    <a href="mailto:support@<?= $fullDomain ?>">support@<?= $fullDomain ?></a>.
                 </li>
             </ul>
 
@@ -211,7 +205,7 @@ $domainTitle = ucwords(str_replace('-', ' ', $domainSlug));
                 <li>
                     Пользователь может получить разъяснения по любым вопросам, обратившись к 
                     Оператору по электронной почте 
-                    <a href="mailto:hello@<?= $fullDomain ?>">hello@<?= $fullDomain ?></a>.
+                    <a href="mailto:support@<?= $fullDomain ?>">support@<?= $fullDomain ?></a>.
                 </li>
                 <li>
                     Актуальная версия Политики <strong><?= $domainTitle ?></strong> находится в свободном 
@@ -222,35 +216,34 @@ $domainTitle = ucwords(str_replace('-', ' ', $domainSlug));
     </section>
 </main>
 
-
-
-
-     <footer class="footer">
-        <div class="container footer__grid">
-            <div class="footer__col">
-                <a href="./#hero" class="logo footer__logo">
-                    <span class="logo__icon"></span>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col footer__col--info">
+                <a href="./#hero" class="logo logo--footer">
+                    <span class="logo__dot"></span>
                     <span class="logo__text">
                         <?= $domainTitle ?>
                     </span>
                 </a>
-                <p class="footer__description">Технологии нового поколения для вашего бизнеса. Переосмыслите подход к
-                    развитию вместе с экспертной поддержкой.</p>
+                <p class="footer__description">
+                    Инновационная технология консалтинга для тех, кто готов переосмыслить подход к развитию бизнеса в
+                    Европе.
+                </p>
             </div>
 
             <div class="footer__col">
                 <h4 class="footer__title">Навигация</h4>
-                <ul class="footer__links">
+                <ul class="footer__menu">
                     <li><a href="./#hero">Главная</a></li>
-                    <li><a href="./#strategies">Стратегии</a></li>
-                    <li><a href="./#expertise">Экспертиза</a></li>
-                    <li><a href="./#insights">Инсайты</a></li>
+                    <li><a href="./#strategy">Стратегия</a></li>
+                    <li><a href="./#insights">Аналитика</a></li>
+                    <li><a href="./#about">О нас</a></li>
                 </ul>
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__title">Документы</h4>
-                <ul class="footer__links">
+                <h4 class="footer__title">Юридическая информация</h4>
+                <ul class="footer__menu">
                     <li><a href="./privacy.php">Privacy Policy</a></li>
                     <li><a href="./cookies.php">Cookie Policy</a></li>
                     <li><a href="./terms.php">Terms of Service</a></li>
@@ -263,46 +256,51 @@ $domainTitle = ucwords(str_replace('-', ' ', $domainSlug));
 
             <div class="footer__col">
                 <h4 class="footer__title">Контакты</h4>
-                <ul class="footer__contact">
-                    <li><i data-lucide="phone" class="icon-sm"></i> +390697639457</li>
-                    <li><i data-lucide="mail" class="icon-sm"></i> hello@
-                        <?= $fullDomain ?>
+                <ul class="footer__contacts">
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+390697639127">+39 06 9763 9127</a>
                     </li>
-                    <li><i data-lucide="map-pin" class="icon-sm"></i> Kurfürstendamm 21, 10719 Berlin, Germany</li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:support@<?= $fullDomain ?>">support@
+                            <?= $fullDomain ?>
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Via Montenapoleone, 8, 20121 Milano MI, Italy</span>
+                    </li>
                 </ul>
             </div>
         </div>
-        <div class="container footer__bottom">
+        <div class="footer__bottom container">
             <p>&copy; 2026
                 <?= $domainTitle ?>. Все права защищены. Предложение активно только в странах ЕС.
             </p>
         </div>
     </footer>
-<div class="mobile-menu">
-    <button class="mobile-menu__close"><i data-lucide="x"></i></button>
-    <ul class="mobile-menu__list">
-        <li><a href="./#hero" class="mobile-menu__link">Главная</a></li>
-        <li><a href="./#strategies" class="mobile-menu__link">Стратегии</a></li>
-        <li><a href="./#expertise" class="mobile-menu__link">Экспертиза</a></li>
-        <li><a href="./#insights" class="mobile-menu__link">Инсайты</a></li>
-        <li><a href="./#reviews" class="mobile-menu__link">Отзывы</a></li>
-        <li><a href="./#contact" class="btn btn--primary">Связаться</a></li>
-    </ul>
-</div>
-
-<div id="cookie-popup" class="cookie-popup">
-    <div class="cookie-popup__content">
-        <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.php">Cookie
-                политике</a>.</p>
-        <button id="cookie-accept" class="btn btn--accent-sm">Принять</button>
-    </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script type="module" src="script.js"></script>    
- 
-    
+        <div class="mobile-overlay" id="mobile-overlay">
+            <div class="mobile-menu">
+                <ul class="mobile-nav">
+                    <li><a href="./#hero">Главная</a></li>
+                    <li><a href="./#strategy">Стратегия</a></li>
+                    <li><a href="./#insights">Аналитика</a></li>
+                    <li><a href="./#innovation">Инновации</a></li>
+                    <li><a href="./#about">О нас</a></li>
+                    <li><a href="./#contact" class="btn btn--primary">Связаться</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="cookie-popup" class="cookie-popup">
+            <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.php">Cookie политике</a>.
+            </p>
+            <button id="cookie-accept" class="btn btn--primary">Принять</button>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
